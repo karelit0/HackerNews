@@ -30,19 +30,19 @@ https://news.ycombinator.com/
 > HtmlSanitizer Endpoint Request using no filters
 ![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.HtmlSanitizer.empty.request.png)
 > Response
-![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.HtmlSanitizer.empty.response.json)
+https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.HtmlSanitizer.empty.response.json
 
 > HtmlSanitizer Endpoint Request using filters
 ![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.HtmlSanitizer.filtered.request.png)
 > Response
-![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.HtmlSanitizer.filtered.response.json)
+https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.HtmlSanitizer.filtered.response.json
 
 > ManualCleaner Endpoint Request using no filters
 ![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.ManualCleaner.empty.request.png)
 > Response
-![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.ManualCleaner.empty.response.json)
+https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.ManualCleaner.empty.response.json
 
 > ManualCleaner Endpoint Request using filters
 ![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.ManualCleaner.filtered.request.png)
 > Response
-![](https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.ManualCleaner.filtered.response.json)
+https://github.com/karelit0/HackerNews/blob/master/documentation/images/Endpoint.ManualCleaner.filtered.response.json
