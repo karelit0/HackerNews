@@ -1,0 +1,327 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HackerNews.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:HackerNews.Domain.Converters.StringConverter">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.Converters.StringConverter" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.Converters.StringConverter.GetInt32(System.String)">
+            <summary>
+            Simple validation of empty string for default value.
+            </summary>
+            <param name="number">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.Converters.StringConverter.GetSingle(System.String)">
+            <summary>
+            Simple validation of empty string for default value.
+            </summary>
+            <param name="number">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="T:HackerNews.Domain.DataScraping.HackerNewsManager">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.DataScraping.HackerNewsManager" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.HackerNewsManager.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HackerNews.Domain.DataScraping.HackerNewsManager"/> class.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.HackerNewsManager.GetHackerNewsHtmlSanitizer(HackerNews.Domain.Entities.HackerNewsFieldEnum,HackerNews.Domain.Entities.HackerNewsFilterOperationEnum,HackerNews.Domain.Entities.HackerNewsFieldEnum,System.Boolean,System.Int32)">
+            <summary>
+            Returns the hacker news on the website.
+            </summary>
+            <param name="filterField">.</param>
+            <param name="filterOperation">.</param>
+            <param name="orderByField">.</param>
+            <param name="orderByFieldDesc">.</param>
+            <param name="maxResultCount">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.HackerNewsManager.GetHackerNewsManualCleaner(HackerNews.Domain.Entities.HackerNewsFieldEnum,HackerNews.Domain.Entities.HackerNewsFilterOperationEnum,HackerNews.Domain.Entities.HackerNewsFieldEnum,System.Boolean,System.Int32)">
+            <summary>
+            Returns the hacker news on the website.
+            </summary>
+            <param name="filterField">.</param>
+            <param name="filterOperation">.</param>
+            <param name="orderByField">.</param>
+            <param name="orderByFieldDesc">.</param>
+            <param name="maxResultCount">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.HackerNewsManager.FilterHackerNews(System.Collections.Generic.IList{HackerNews.Domain.Entities.HackerNewsItem},HackerNews.Domain.Entities.HackerNewsFieldEnum,HackerNews.Domain.Entities.HackerNewsFilterOperationEnum,HackerNews.Domain.Entities.HackerNewsFieldEnum,System.Boolean)">
+            <summary>
+            The FilterHackerNews.
+            </summary>
+            <param name="hackerNewsItemList">The hackerNewsItemList<see cref="T:System.Collections.Generic.IList`1"/>.</param>
+            <param name="filterField">The filterField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="filterOperation">The filterOperation<see cref="T:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum"/>.</param>
+            <param name="orderByField">The orderByField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="orderByFieldDesc">The orderByFieldDesc<see cref="T:System.Boolean"/>.</param>
+            <returns>The <see cref="T:System.Collections.Generic.IList`1"/>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.HackerNewsManager.GetHackerNewsItemExpressionFilter(LambdaExpressionBuilder.LambdaExpressionBuilder{HackerNews.Domain.Entities.HackerNewsItem},HackerNews.Domain.Entities.HackerNewsFieldEnum,HackerNews.Domain.Entities.HackerNewsFilterOperationEnum)">
+            <summary>
+            The GetHackerNewsItemExpressionFilter.
+            </summary>
+            <param name="expressionBuilder">The expressionBuilder<see cref="T:LambdaExpressionBuilder.LambdaExpressionBuilder`1"/>.</param>
+            <param name="filterField">The filterField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="filterOperation">The filterOperation<see cref="T:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum"/>.</param>
+            <returns>The <see cref="!:Expression&lt;Func&lt;HackerNewsItem, bool&gt;&gt;"/>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.HackerNewsManager.GetHackerNewsItemExpressionSort(LambdaExpressionBuilder.LambdaExpressionBuilder{HackerNews.Domain.Entities.HackerNewsItem},HackerNews.Domain.Entities.HackerNewsFieldEnum,System.Boolean)">
+            <summary>
+            The GetHackerNewsItemExpressionSort.
+            </summary>
+            <param name="expressionBuilder">The expressionBuilder<see cref="T:LambdaExpressionBuilder.LambdaExpressionBuilder`1"/>.</param>
+            <param name="orderByField">The orderByField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="orderByFieldDesc">The orderByFieldDesc<see cref="T:System.Boolean"/>.</param>
+            <returns>The <see cref="!:Expression&lt;Func&lt;HackerNewsItem, object&gt;&gt;"/>.</returns>
+        </member>
+        <member name="T:HackerNews.Domain.DataScraping.IHackerNewsManager">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.DataScraping.IHackerNewsManager" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.IHackerNewsManager.GetHackerNewsHtmlSanitizer(HackerNews.Domain.Entities.HackerNewsFieldEnum,HackerNews.Domain.Entities.HackerNewsFilterOperationEnum,HackerNews.Domain.Entities.HackerNewsFieldEnum,System.Boolean,System.Int32)">
+            <summary>
+            The GetHackerNewsHtmlSanitizer.
+            </summary>
+            <param name="filterField">The filterField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="filterOperation">The filterOperation<see cref="T:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum"/>.</param>
+            <param name="orderByField">The orderByField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="orderByFieldDesc">The orderByFieldDesc<see cref="T:System.Boolean"/>.</param>
+            <param name="maxResultCount">The maxResultCount<see cref="T:System.Int32"/>.</param>
+            <returns>The <see cref="!:Task&lt;IList&lt;HackerNewsItem&gt;&gt;"/>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.DataScraping.IHackerNewsManager.GetHackerNewsManualCleaner(HackerNews.Domain.Entities.HackerNewsFieldEnum,HackerNews.Domain.Entities.HackerNewsFilterOperationEnum,HackerNews.Domain.Entities.HackerNewsFieldEnum,System.Boolean,System.Int32)">
+            <summary>
+            The GetHackerNewsManualCleaner.
+            </summary>
+            <param name="filterField">The filterField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="filterOperation">The filterOperation<see cref="T:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum"/>.</param>
+            <param name="orderByField">The orderByField<see cref="T:HackerNews.Domain.Entities.HackerNewsFieldEnum"/>.</param>
+            <param name="orderByFieldDesc">The orderByFieldDesc<see cref="T:System.Boolean"/>.</param>
+            <param name="maxResultCount">The maxResultCount<see cref="T:System.Int32"/>.</param>
+            <returns>The <see cref="!:Task&lt;IList&lt;HackerNewsItem&gt;&gt;"/>.</returns>
+        </member>
+        <member name="T:HackerNews.Domain.Decorator.DescriptionAttibuteDecorator">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.Decorator.DescriptionAttibuteDecorator" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.Decorator.DescriptionAttibuteDecorator.GetDescription(System.Enum)">
+            <summary>
+            The GetDescription.
+            </summary>
+            <param name="e">The e<see cref="T:System.Enum"/>.</param>
+            <returns>The <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="T:HackerNews.Domain.Entities.HackerNewsFieldEnum">
+            <summary>
+            Logic representation of fields <see cref="T:HackerNews.Domain.Entities.HackerNewsItem"/> for DTO's class
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFieldEnum.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFieldEnum.RankOrder">
+            <summary>
+            Rank Order
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFieldEnum.Title">
+            <summary>
+            Title
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFieldEnum.TitleLength">
+            <summary>
+            Title length
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFieldEnum.AmountComments">
+            <summary>
+            Amount of Comments
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFieldEnum.Points">
+            <summary>
+            Points
+            </summary>
+        </member>
+        <member name="T:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum">
+            <summary>
+            Logic reference to custom filter
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum.MoreThanFiveWords">
+            <summary>
+            More than five words
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum.MoreThanOrEqualToFiveWords">
+            <summary>
+            More than or equals to five words
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum.LessThanFiveWords">
+            <summary>
+            Less than five words
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.Entities.HackerNewsFilterOperationEnum.LessThanOrEqualToFiveWords">
+            <summary>
+            Less than or equals to five words
+            </summary>
+        </member>
+        <member name="T:HackerNews.Domain.Entities.HackerNewsItem">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.Entities.HackerNewsItem" />.
+            </summary>
+        </member>
+        <member name="P:HackerNews.Domain.Entities.HackerNewsItem.AmountComments">
+            <summary>
+            Gets or sets the AmountComments.
+            </summary>
+        </member>
+        <member name="P:HackerNews.Domain.Entities.HackerNewsItem.Id">
+            <summary>
+            Gets or sets the Id.
+            </summary>
+        </member>
+        <member name="P:HackerNews.Domain.Entities.HackerNewsItem.Points">
+            <summary>
+            Gets or sets the Points.
+            </summary>
+        </member>
+        <member name="P:HackerNews.Domain.Entities.HackerNewsItem.RankOrder">
+            <summary>
+            Gets or sets the RankOrder.
+            </summary>
+        </member>
+        <member name="P:HackerNews.Domain.Entities.HackerNewsItem.Title">
+            <summary>
+            Gets or sets the Title.
+            </summary>
+        </member>
+        <member name="T:HackerNews.Domain.HtmlCleaner.HtmlDocumentSanitizer">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.HtmlCleaner.HtmlDocumentSanitizer" />.
+            <para>This uses: HtmlSanitizer and HtmlAgilityPack</para>
+            <para>HtmlSanitizer: It is used to clean and close all the html tags, to get a valid Html</para>
+            <para>HtmlAgilityPack> It is used to filter throw XPath</para>
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.HtmlDocumentSanitizer.ScrapeHackerNewsHtmlContent(System.String,System.Int32)">
+            <summary>
+            Scrape Html content and map to business entity.
+            </summary>
+            <param name="hackerNewsHtmlContent">html content.</param>
+            <param name="pageSize">number of business entities to map.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.HtmlDocumentSanitizer.ReadMainFields(HtmlAgilityPack.HtmlDocument,System.Int32)">
+            <summary>
+            Iterate html main rows to get main fields.
+            </summary>
+            <param name="htmlDocument">.</param>
+            <param name="pageSize">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.HtmlDocumentSanitizer.ReadSecondaryFields(HtmlAgilityPack.HtmlDocument,System.Int32,System.Collections.Generic.IList{HackerNews.Domain.Entities.HackerNewsItem})">
+            <summary>
+            Iterate html secondary rows to get suplementary fields.
+            </summary>
+            <param name="htmlDocument">.</param>
+            <param name="pageSize">.</param>
+            <param name="hackerNewsItem">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="T:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser" />.
+            <para>This class uses: XmlDocument</para>
+            <para>Manual clean up: Manual clean up to get a valid table html tag, fix encondig for reading</para>
+            <para>XmlDocument: It is used to filter throw XPath</para>
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser"/> class.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser.ScrapeHackerNewsHtmlContent(System.IO.Stream,System.Int32)">
+            <summary>
+            Scrape Html content and map to business entity.
+            </summary>
+            <param name="hackerNewsHtmlContent">html content.</param>
+            <param name="pageSize">number of business entities to map.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser.LoadItemListTable(System.Xml.XmlDocument,System.IO.Stream)">
+            <summary>
+            Read manually the html and clean table.
+            </summary>
+            <param name="xmlDocument">.</param>
+            <param name="hackerNewsHtmlContent">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser.ReadMainFields(System.Xml.XmlDocument,System.Int32)">
+            <summary>
+            Iterate html main rows to get main fields.
+            </summary>
+            <param name="xmlDocument">.</param>
+            <param name="pageSize">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.HtmlCleaner.ManualHtmlTableParser.ReadSecondaryFields(System.Xml.XmlDocument,System.Int32,System.Collections.Generic.IList{HackerNews.Domain.Entities.HackerNewsItem})">
+            <summary>
+            Iterate html secondary rows to get suplementary fields.
+            </summary>
+            <param name="xmlDocument">.</param>
+            <param name="pageSize">.</param>
+            <param name="hackerNewsItem">.</param>
+            <returns>.</returns>
+        </member>
+        <member name="T:HackerNews.Domain.HttpClients.HackerNewsClient">
+            <summary>
+            Defines the <see cref="T:HackerNews.Domain.HttpClients.HackerNewsClient" />.
+            </summary>
+        </member>
+        <member name="F:HackerNews.Domain.HttpClients.HackerNewsClient.hackerNewsUrl">
+            <summary>
+            Defines the hackerNewsUrl.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.HttpClients.HackerNewsClient.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HackerNews.Domain.HttpClients.HackerNewsClient"/> class.
+            </summary>
+        </member>
+        <member name="M:HackerNews.Domain.HttpClients.HackerNewsClient.GetNewsAsStream">
+            <summary>
+            Send Http.Get to read the content of the web page.
+            <para>If error: return Exception</para>
+            <para>If success: return stream</para>.
+            </summary>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.Domain.HttpClients.HackerNewsClient.GetNewsAsString">
+            <summary>
+            Send Http.Get to read the content of the web page.
+            <para>If error: return Exception</para>
+            <para>If success: return stream</para>.
+            </summary>
+            <returns>.</returns>
+        </member>
+    </members>
+</doc>

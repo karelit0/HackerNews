@@ -29,7 +29,6 @@ namespace HackerNews.Domain.HtmlCleaner
             IList<HackerNewsItem> hackerNewsItem;
 
             HtmlDocument htmlDocument = new HtmlDocument();
-            bool isItemListHtmlTable = false;
 
             var sanitizer = new HtmlSanitizer();
 
@@ -42,9 +41,9 @@ namespace HackerNews.Domain.HtmlCleaner
 
             htmlDocument.LoadHtml(sanitized);
 
-            hackerNewsItem = ReadMainFields(htmlDocument, pageSize, isItemListHtmlTable);
+            hackerNewsItem = ReadMainFields(htmlDocument, pageSize);
 
-            hackerNewsItem = ReadSecondaryFields(htmlDocument, pageSize, hackerNewsItem, isItemListHtmlTable);
+            hackerNewsItem = ReadSecondaryFields(htmlDocument, pageSize, hackerNewsItem);
 
             return hackerNewsItem;
         }
@@ -58,9 +57,8 @@ namespace HackerNews.Domain.HtmlCleaner
         /// </summary>
         /// <param name="htmlDocument">.</param>
         /// <param name="pageSize">.</param>
-        /// <param name="isItemListHtmlTable">.</param>
         /// <returns>.</returns>
-        private IList<HackerNewsItem> ReadMainFields(HtmlDocument htmlDocument, int pageSize, bool isItemListHtmlTable)
+        private IList<HackerNewsItem> ReadMainFields(HtmlDocument htmlDocument, int pageSize)
         {
             IList<HackerNewsItem> hackerNewsItem;
 
@@ -102,9 +100,8 @@ namespace HackerNews.Domain.HtmlCleaner
         /// <param name="htmlDocument">.</param>
         /// <param name="pageSize">.</param>
         /// <param name="hackerNewsItem">.</param>
-        /// <param name="isItemListHtmlTable">.</param>
         /// <returns>.</returns>
-        private IList<HackerNewsItem> ReadSecondaryFields(HtmlDocument htmlDocument, int pageSize, IList<HackerNewsItem> hackerNewsItem, bool isItemListHtmlTable)
+        private IList<HackerNewsItem> ReadSecondaryFields(HtmlDocument htmlDocument, int pageSize, IList<HackerNewsItem> hackerNewsItem)
         {
             // Use the full path for html well formed
             string xpath = $"/html/body/center/table[@id=\"hnmain\"]/tbody/tr/td/table/tbody/tr/td[@class=\"subtext\"][position()>0 and position()<={pageSize}]/..";
@@ -115,7 +112,7 @@ namespace HackerNews.Domain.HtmlCleaner
 
             foreach (HtmlNode htmlNode in htmlNodeCollection)
             {
-                if (hackerNewsItem.Count < hackerNewsItemIndex)
+                if (hackerNewsItem.Count <= hackerNewsItemIndex)
                 {
                     break;
                 }
@@ -146,11 +143,6 @@ namespace HackerNews.Domain.HtmlCleaner
                     if (htmlNode.ChildNodes[1].ChildNodes[i].InnerText.Contains("comments"))
                     {
                         string htmlContent = htmlNode.ChildNodes[1].ChildNodes[i].InnerText.Replace("&nbsp;", " ");
-
-                        if (!isItemListHtmlTable)
-                        {
-                            htmlContent = htmlContent.Replace("&nbsp;", " ");
-                        }
 
                         hackerNewsItem[hackerNewsItemIndex].AmountComments = StringConverter.GetInt32(htmlContent);
                     }

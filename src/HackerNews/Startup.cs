@@ -133,16 +133,10 @@ namespace HackerNews.WebApi
                 options.SwaggerDoc("v1", new OpenApiInfo() { Title = "HackerNews API", Version = "v1" });
                 options.DocInclusionPredicate((docName, description) => true);
 
-                // Define the BearerAuth scheme that's in use
-                options.AddSecurityDefinition("bearerAuth", new OpenApiSecurityScheme()
-                {
-                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                    Name = "Authorization",
-                    In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey
-                });
-
-                //options.DescribeAllEnumsAsStrings();
+                // Set the comments path for the Swagger JSON and UI.**
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                options.IncludeXmlComments(xmlPath);
             });
 
             services.AddSingleton<IHackerNewsManager, HackerNewsManager>();

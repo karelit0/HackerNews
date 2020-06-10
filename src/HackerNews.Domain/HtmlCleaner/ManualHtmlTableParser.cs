@@ -161,7 +161,7 @@ namespace HackerNews.Domain.HtmlCleaner
 
             foreach (XmlNode xmlNode in xmlNodeList)
             {
-                if (hackerNewsItem.Count < hackerNewsItemIndex)
+                if (hackerNewsItem.Count <= hackerNewsItemIndex)
                 {
                     break;
                 }

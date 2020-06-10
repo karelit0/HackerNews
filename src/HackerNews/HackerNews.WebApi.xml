@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HackerNews.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:HackerNews.WebApi.Configuration.AppConfigurations">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Configuration.AppConfigurations" />.
+            </summary>
+        </member>
+        <member name="F:HackerNews.WebApi.Configuration.AppConfigurations._configurationCache">
+            <summary>
+            Defines the _configurationCache.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Configuration.AppConfigurations.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:HackerNews.WebApi.Configuration.AppConfigurations"/> class.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Configuration.AppConfigurations.Get(System.String,System.String,System.Boolean)">
+            <summary>
+            The Get.
+            </summary>
+            <param name="path">The path<see cref="T:System.String"/>.</param>
+            <param name="environmentName">The environmentName<see cref="T:System.String"/>.</param>
+            <param name="addUserSecrets">The addUserSecrets<see cref="T:System.Boolean"/>.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/>.</returns>
+        </member>
+        <member name="M:HackerNews.WebApi.Configuration.AppConfigurations.BuildConfiguration(System.String,System.String,System.Boolean)">
+            <summary>
+            The BuildConfiguration.
+            </summary>
+            <param name="path">The path<see cref="T:System.String"/>.</param>
+            <param name="environmentName">The environmentName<see cref="T:System.String"/>.</param>
+            <param name="addUserSecrets">The addUserSecrets<see cref="T:System.Boolean"/>.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/>.</returns>
+        </member>
+        <member name="T:HackerNews.WebApi.Configuration.AuthConfigurer">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Configuration.AuthConfigurer" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Configuration.AuthConfigurer.Configure(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            The Configure.
+            </summary>
+            <param name="services">The services<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+            <param name="configuration">The configuration<see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/>.</param>
+        </member>
+        <member name="T:HackerNews.WebApi.Configuration.HackerNewsBaseController">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Configuration.HackerNewsBaseController" />.
+            </summary>
+        </member>
+        <member name="F:HackerNews.WebApi.Configuration.HackerNewsBaseController.mapper">
+            <summary>
+            Defines the mapper.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Configuration.HackerNewsBaseController.#ctor(AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HackerNews.WebApi.Configuration.HackerNewsBaseController"/> class.
+            </summary>
+            <param name="mapper">The mapper<see cref="T:AutoMapper.IMapper"/>.</param>
+        </member>
+        <member name="T:HackerNews.WebApi.Configuration.HackerNewsBaseMapProfile">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Configuration.HackerNewsBaseMapProfile" />.
+            </summary>
+        </member>
+        <member name="T:HackerNews.WebApi.Configuration.HostingEnvironmentExtensions">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Configuration.HostingEnvironmentExtensions" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Configuration.HostingEnvironmentExtensions.GetAppConfiguration(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            The GetAppConfiguration.
+            </summary>
+            <param name="env">The env<see cref="T:Microsoft.AspNetCore.Hosting.IWebHostEnvironment"/>.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Configuration.IConfigurationRoot"/>.</returns>
+        </member>
+        <member name="T:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto" />.
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto.AmountComments">
+            <summary>
+            Gets or sets the AmountComments
+            Amount of Comments...
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto.Id">
+            <summary>
+            Gets or sets the Id
+            Id...
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto.Points">
+            <summary>
+            Gets or sets the Points
+            Points...
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto.RankOrder">
+            <summary>
+            Gets or sets the RankOrder
+            Rank Order...
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto.Title">
+            <summary>
+            Gets or sets the Title
+            Title...
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsItemDto.TitleLength">
+            <summary>
+            Gets the TitleLength
+            Title length...
+            </summary>
+        </member>
+        <member name="T:HackerNews.WebApi.Controllers.Dto.HackerNewsMapProfile">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsMapProfile" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Controllers.Dto.HackerNewsMapProfile.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsMapProfile"/> class.
+            </summary>
+        </member>
+        <member name="T:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto" />.
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto.FilterField">
+            <summary>
+            Logic reference to field to use on filter
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto.FilterOperation">
+            <summary>
+            Logic reference to operation to use on filter
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto.MaxResultCount">
+            <summary>
+            Default max setted on 30 rows
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto.OrderByField">
+            <summary>
+            Logic reference to filed to use on orderby
+            </summary>
+        </member>
+        <member name="P:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto.OrderByFieldDesc">
+            <summary>
+            Gets or sets a value indicating whether OrderByFieldDesc
+            </summary>
+        </member>
+        <member name="T:HackerNews.WebApi.Controllers.HackerNewsController">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Controllers.HackerNewsController" />.
+            Endpoints to get information from "https://news.ycombinator.com/"
+            </summary>
+        </member>
+        <member name="F:HackerNews.WebApi.Controllers.HackerNewsController.hackerNewsManager">
+            <summary>
+            Defines the hackerNewsManager.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Controllers.HackerNewsController.#ctor(HackerNews.Domain.DataScraping.IHackerNewsManager,AutoMapper.IMapper)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HackerNews.WebApi.Controllers.HackerNewsController"/> class.
+            </summary>
+            <param name="hackerNewsManager">The hackerNewsManager<see cref="T:HackerNews.Domain.DataScraping.IHackerNewsManager"/>.</param>
+            <param name="mapper">The mapper<see cref="T:AutoMapper.IMapper"/>.</param>
+        </member>
+        <member name="M:HackerNews.WebApi.Controllers.HackerNewsController.GetHackerNewsHtmlSanitizer(HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto)">
+            <summary>
+            Get Hacker News from website. Use HtmlSanitizer and HtmlAgility to get information
+            </summary>
+            <param name="hackerNewsPagedResultRequestDto">The hackerNewsPagedResultRequestDto<see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto"/>.</param>
+            <returns>.</returns>
+        </member>
+        <member name="M:HackerNews.WebApi.Controllers.HackerNewsController.GetHackerNewsManualCleaner(HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto)">
+            <summary>
+            Get Hacker News from website. Use manual cleaner functionallity
+            </summary>
+            <param name="hackerNewsPagedResultRequestDto">The hackerNewsPagedResultRequestDto<see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto"/>.</param>
+            <returns>.</returns>
+        </member>
+        <member name="T:HackerNews.WebApi.Controllers.IHackerNewsAppService">
+            <summary>
+            Scrap data from Hacker News WebSite.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Controllers.IHackerNewsAppService.GetHackerNewsHtmlSanitizer(HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto)">
+            <summary>
+            The GetHackerNewsHtmlSanitizer.
+            </summary>
+            <param name="hackerNewsPagedResultRequestDto">The hackerNewsPagedResultRequestDto<see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto"/>.</param>
+            <returns>The <see cref="!:Task&lt;IList&lt;HackerNewsItemDto&gt;&gt;"/>.</returns>
+        </member>
+        <member name="M:HackerNews.WebApi.Controllers.IHackerNewsAppService.GetHackerNewsManualCleaner(HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto)">
+            <summary>
+            The GetHackerNewsManualCleaner.
+            </summary>
+            <param name="hackerNewsPagedResultRequestDto">The hackerNewsPagedResultRequestDto<see cref="T:HackerNews.WebApi.Controllers.Dto.HackerNewsPagedResultRequestDto"/>.</param>
+            <returns>The <see cref="!:Task&lt;IList&lt;HackerNewsItemDto&gt;&gt;"/>.</returns>
+        </member>
+        <member name="T:HackerNews.WebApi.Program">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Program" />.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            The CreateHostBuilder.
+            </summary>
+            <param name="args">The args<see cref="!:string[]"/>.</param>
+            <returns>The <see cref="T:Microsoft.Extensions.Hosting.IHostBuilder"/>.</returns>
+        </member>
+        <member name="M:HackerNews.WebApi.Program.Main(System.String[])">
+            <summary>
+            The Main.
+            </summary>
+            <param name="args">The args<see cref="!:string[]"/>.</param>
+        </member>
+        <member name="T:HackerNews.WebApi.Startup">
+            <summary>
+            Defines the <see cref="T:HackerNews.WebApi.Startup" />.
+            </summary>
+        </member>
+        <member name="F:HackerNews.WebApi.Startup._defaultCorsPolicyName">
+            <summary>
+            Defines the _defaultCorsPolicyName.
+            </summary>
+        </member>
+        <member name="F:HackerNews.WebApi.Startup._appConfiguration">
+            <summary>
+            Defines the _appConfiguration.
+            </summary>
+        </member>
+        <member name="M:HackerNews.WebApi.Startup.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HackerNews.WebApi.Startup"/> class.
+            </summary>
+            <param name="env">The env<see cref="T:Microsoft.AspNetCore.Hosting.IWebHostEnvironment"/>.</param>
+        </member>
+        <member name="M:HackerNews.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            The Configure.
+            </summary>
+            <param name="app">The app<see cref="T:Microsoft.AspNetCore.Builder.IApplicationBuilder"/>.</param>
+            <param name="loggerFactory">The loggerFactory<see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/>.</param>
+        </member>
+        <member name="M:HackerNews.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            The ConfigureServices.
+            </summary>
+            <param name="services">The services<see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</param>
+        </member>
+    </members>
+</doc>

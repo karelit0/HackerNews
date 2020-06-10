@@ -10,6 +10,7 @@ namespace HackerNews.WebApi.Controllers
 {
     /// <summary>
     /// Defines the <see cref="HackerNewsController" />.
+    /// Endpoints to get information from "https://news.ycombinator.com/"
     /// </summary>
     public class HackerNewsController : HackerNewsBaseController, IHackerNewsAppService
     {
@@ -39,7 +40,7 @@ namespace HackerNews.WebApi.Controllers
         #region Public Methods
 
         /// <summary>
-        /// Get Hacker News from website.
+        /// Get Hacker News from website. Use HtmlSanitizer and HtmlAgility to get information
         /// </summary>
         /// <param name="hackerNewsPagedResultRequestDto">The hackerNewsPagedResultRequestDto<see cref="HackerNewsPagedResultRequestDto"/>.</param>
         /// <returns>.</returns>
@@ -56,7 +57,7 @@ namespace HackerNews.WebApi.Controllers
         }
 
         /// <summary>
-        /// Get Hacker News from website.
+        /// Get Hacker News from website. Use manual cleaner functionallity
         /// </summary>
         /// <param name="hackerNewsPagedResultRequestDto">The hackerNewsPagedResultRequestDto<see cref="HackerNewsPagedResultRequestDto"/>.</param>
         /// <returns>.</returns>
